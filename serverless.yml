@@ -1,0 +1,33 @@
+service: proyCulqi
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: testing
+  region: us-east-1
+  memorySize: 128
+  timeout: 10
+
+functions:
+  tokens:
+    handler: dist/handlers/tokensHandler.handler
+    events:
+      - http:
+          path: /tokens
+          method: POST
+          cors: true
+  getCardDataByToken:
+    handler: dist/handlers/getCardDataByTokenHandler.handler
+    events:
+      - http:
+          path: /getCardData
+          method: GET
+          cors: true
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    cors: false
+    httpPort: 3000

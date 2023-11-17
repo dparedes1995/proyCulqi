@@ -1,0 +1,43 @@
+# Node.js
+node_modules/
+
+# TypeScript
+*.tsbuildinfo
+*.log
+*.d.ts
+
+# Serverless
+.serverless/
+
+# Visual Studio Code
+.vscode/
+
+# Dependency directories
+# (avoided for npm 7+ where it creates a symlink to reduce storage cost)
+.pnpm/
+yarn-error.log
+package-lock.json
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+# TypeScript build output
+dist/
+# IntelliJ IDEA
+.idea/
+coverage/
